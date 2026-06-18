@@ -1,0 +1,16 @@
+fastapi
+uvicorn
+pydantic
+pydantic-settings
+torch
+torchvision
+opencv-python-headless
+numpy
+fpdf2
+pyyaml
+python-multipart
+python-magic
+python-magic-bin
+timm
+albumentations
+grad-cam

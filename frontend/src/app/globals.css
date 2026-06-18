@@ -1,0 +1,103 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  
+  --font-sans: "Inter", var(--font-sans);
+  --font-heading: "Inter", var(--font-sans);
+  
+  /* Primary Scale */
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-light: var(--primary-light);
+  --color-primary-foreground: var(--primary-foreground);
+  
+  /* Semantic Colors */
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-danger: var(--danger);
+  --color-danger-foreground: var(--danger-foreground);
+  
+  /* Surface Scale */
+  --color-surface: var(--surface);
+  --color-surface-secondary: var(--surface-secondary);
+  --color-surface-dark: var(--surface-dark);
+  --color-card: var(--surface);
+  --color-card-foreground: var(--text-primary);
+  
+  /* Text Scale */
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted);
+  
+  /* Border Scale */
+  --color-border: var(--border);
+  --color-border-hover: var(--border-hover);
+  --color-input: var(--border);
+  --color-ring: var(--primary);
+
+  /* Radius Scale */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-card: 1.25rem; /* 20px */
+  --radius-pill: 9999px;
+  --radius: var(--radius-card);
+
+  /* Shadow Scale */
+  --shadow-soft: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
+  --shadow-hover: 0 10px 30px -4px rgba(15, 23, 42, 0.1);
+  --shadow-modal: 0 20px 40px -8px rgba(15, 23, 42, 0.15);
+}
+
+:root {
+  /* Colors */
+  --primary: #0F6CBD;
+  --primary-hover: #0958A8;
+  --primary-light: #DCEEFF;
+  --primary-foreground: #FFFFFF;
+  
+  --success: #10B981;
+  --success-foreground: #FFFFFF;
+  
+  --warning: #F59E0B;
+  --warning-foreground: #FFFFFF;
+  
+  --danger: #EF4444;
+  --danger-foreground: #FFFFFF;
+  
+  --background: #F8FAFC;
+  --surface: #FFFFFF;
+  --surface-secondary: #F1F5F9;
+  --surface-dark: #0B1120;
+  
+  --border: #E5E7EB;
+  --border-hover: #CBD5E1;
+  
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --muted: #94A3B8;
+
+  --foreground: var(--text-primary);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-text-primary antialiased selection:bg-primary-light selection:text-primary;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-text-primary tracking-tight font-heading;
+  }
+}

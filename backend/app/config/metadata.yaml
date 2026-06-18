@@ -1,0 +1,10 @@
+version: "1.0.0"
+dataset: "NDB-UFES (Single Source)"
+training_date: "2023-10-25"
+input_size: 224
+performance:
+  accuracy: 83.57
+  macro_f1: 82.90
+  ece: 0.0493
+temperature: 1.3652
+git_commit: "unknown"
